@@ -3,6 +3,8 @@ import Link from "next/link";
 import "../styles/globals.css";
 import Aboutme from "@/components/aboutme";
 import Portfolio from "@/components/portfolio";
+import Connect from '@/components/connect';
+
 
 export default function Home() {
   return (
@@ -78,6 +80,7 @@ export default function Home() {
       </section>
       <Aboutme />
       <Portfolio />
+      <Connect />
     </>
   );
 }
