@@ -20,6 +20,18 @@
   height: 100px;
 }
 
+@layer components {
+  .card {
+
+    @apply w-[470px] h-[370px] p-7 text-[#003135] rounded-3xl
+           bg-[#0FA4AF] border-[7px] border-[#003135] shadow-lg
+           transition-all duration-500 ease-out;   
+
+    @apply hover:bg-[#AFDDE5] hover:border-[10px]
+           hover:shadow-lg hover:scale-105;    
+  }
+}
+
 
 
 
