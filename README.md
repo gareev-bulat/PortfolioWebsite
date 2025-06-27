@@ -70,3 +70,11 @@ npm run dev
 - public/images/ – Optimised PNG/SVG assets
 
 - styles/globals.css – Tailwind directives + custom @layer components
+
+
+## 🎨 Design
+
+The full Figma mock-ups (plus exported screenshots) live under  
+[`design/`](design/) – or jump straight to the live file:
+
+[View on Figma](https://www.figma.com/design/EOyeiW3YtMeZ6yX3XD3uLL/Portfolio-Website-project?t=cj5La8L4TkjeBBCW-0)
