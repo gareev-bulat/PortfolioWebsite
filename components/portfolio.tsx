@@ -1,7 +1,7 @@
 import React from 'react'
-import MainLine from './mainLine'
 import ProjectCard from './projectCard'
 import type { ToolKey } from './projectCard'
+
 
 
 type PortfolioItem = {
@@ -42,16 +42,14 @@ const ITEMS: PortfolioItem[] = [
 
 const Portfolio = () => {
   return (
-    <section>
+    <section id="portfolio">
     <h2 className="text-3xl text-white text-center sm:text-3xl lg:text-5xl p-4">Portfolio</h2>
     <div className='flex items-start justify-center'>
     <div className='flex flex-col items-center gap-10 m-20'>
-        {ITEMS.map((item) => (
+        {ITEMS.map((item) => (      
             <ProjectCard key={item.id} name={item.name} image={item.image} tools={item.tools} dataFrame={item.data} />
         ))}
     </div>
-
-    <MainLine />
     </div>
 
   

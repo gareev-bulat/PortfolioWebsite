@@ -3,7 +3,7 @@ import React from 'react'
 
 const Connect = () => {
   return (
-    <section>
+    <section id="connect">
     <h2 className="text-3xl text-white text-center sm:text-3xl lg:text-5xl p-4">Connect with me</h2>
     <form className='max-w-3xl mx-auto mt-8 mb-20 space-y-4 text-white text-base_l shadow-2xl shadow-white bg-gradient-to-b flex flex-col items-center p-4 rounded-3xl from-[#964734] to-[#0FA4AF]'>
       <div className='flex flex-col w-full px-4'>

@@ -4,12 +4,13 @@ import "../styles/globals.css";
 import Aboutme from "@/components/aboutme";
 import Portfolio from "@/components/portfolio";
 import Connect from '@/components/connect';
+import SideNavBar from "@/components/sidenavbar";
 
 
 export default function Home() {
   return (
     <>
-      <section>
+      <section id="hero">
         <div className="flex flex-row justify-evenly m-20">
           <div
             className="absolute inset-0 flex justify-center pointer-events-none"

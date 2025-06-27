@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@/styles/globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import SideNavBar from "@/components/sidenavbar";
 
 
 const roboto = localFont({
@@ -43,9 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
-      
+    <html lang="en" className={`${roboto.className} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-[linear-gradient(180deg,_#003135_4%,_#024950_56%)]">
+        <SideNavBar />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

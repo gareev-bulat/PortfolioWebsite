@@ -20,7 +20,7 @@ const Aboutme = () => {
   const [active, setActive] = useState(tabs[0]);
 
   return (
-    <section>
+    <section id="aboutme">
       <h2 className="text-3xl text-white text-center sm:text-3xl lg:text-5xl p-4">
         About me
       </h2>
@@ -99,19 +99,19 @@ const Aboutme = () => {
             </div>
           </article>
           <article className="card">
-            <h1 className="pb-8 text-base_l lg:text-lg">Values</h1>
-            <ul className="list-none list-inside ml-2 space-y-5 marker:text-brand-500">
+            <h1 className="pb-4 text-base_l lg:text-lg">Values</h1>
+            <ul className="list-none list-inside ml-2 space-y-3 marker:text-brand-500">
               <li className="font-light">
-                <span className="text-base font-semibold text-brand-900">Continuous Learning</span> 
-                <p className='pl-5 p-1'>I am always exploring new tools and best practices</p>
+                <span className="text-base text-decoration-line: underline underline-offset-[8px] decoration-2 decoration-brand-200 hover:decoration-4 font-semibold text-brand-900">Continuous Learning</span> 
+                <p className='pl-5 p-1 pt-4'>I am always exploring new tools and best practices</p>
               </li>
               <li className="font-light">
-                <span className="text-base font-semibold text-brand-900">Collaboration</span> 
-                <p className='pl-5 p-1'>I believe great products come from open feedback and teamwork</p>
+                <span className="text-base text-decoration-line: underline underline-offset-[8px] decoration-2 decoration-brand-200 hover:decoration-4 font-semibold text-brand-900">Collaboration</span> 
+                <p className='pl-5 p-1 pt-4'>I believe great products come from open feedback and teamwork</p>
               </li>
               <li className="font-light">
-                <span className="text-base font-semibold text-brand-900">Growth Mindset</span> 
-                <p className='pl-5 p-1'>I welcome
+                <span className="text-base text-decoration-line: underline underline-offset-[8px] decoration-2 decoration-brand-200 hover:decoration-4 font-semibold text-brand-900">Growth Mindset</span> 
+                <p className='pl-5 p-1 pt-4'>I welcome
                 challenges as opportunities to level up</p>
               </li>
             </ul>
