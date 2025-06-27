@@ -26,7 +26,7 @@ export default function Home() {
             />
             <a
               className="inline-flex bg-brand-500 items-center space-x-2 rounded-full border border-white mt-3 py-1 px-6 hover:bg-brand-700"
-              href="/BulatGareevResume.pdf"
+              href="/docs/BulatGareevResume.pdf"
               download="BulatGareevResume.pdf"
             >
               <Image
