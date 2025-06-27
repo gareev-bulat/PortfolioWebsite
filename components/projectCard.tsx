@@ -32,7 +32,7 @@ const GITHUB_links = {
 
 }
 
-type ToolKey = keyof typeof PATHS;
+export type ToolKey = keyof typeof PATHS;
 
 
 type CardProps = {
