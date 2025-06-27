@@ -4,20 +4,28 @@
 
 
 :root {
-  --background: #ffffff;
+  --background: linear-gradient(to bottom, #003135 4%, #024950 56%);
   --foreground: #171717;
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: linear-gradient(to bottom, #003135 4%, #024950 56%);
+    --foreground: #171717;
   }
 }
+
+.h-header {
+
+  height: 100px;
+}
+
+
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto);
+  font-weight: 700;
 }
