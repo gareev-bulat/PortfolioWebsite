@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <>
       <section id="hero">
+        <SideNavBar />
         <div className="flex flex-row justify-evenly m-20">
           <div
             className="absolute inset-0 flex justify-center pointer-events-none"
