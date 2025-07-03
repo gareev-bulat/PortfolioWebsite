@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en" className={`${roboto.className} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-[linear-gradient(180deg,_#003135_4%,_#024950_56%)]">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

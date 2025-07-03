@@ -14,8 +14,9 @@ const Experience = () => {
         backDelay={5000}
         loop
         className="
+          text-5xl
           sm:text-5xl
-          md:text-5xl
+          md:text-7xl
           lg:text-7xl       
           font-bold
           bg-gradient-to-b   

@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const SideNavBar = () => {
   return (
-    <div className='fixed left-5 top-1/2 -translate-y-1/2 h-[150px] w-[150px] flex flex-col justify-center'>
-        <ul className='list-disc list-inside space-y-4 text-white items-center'>
+    <div className='fixed z-10 bottom-0 left-1/2 transform -translate-x-1/2 mb-20 p-5 px-10 h-auto rounded-lg flex flex-col justify-center bg-gradient-to-b from-brand-200 to-brand-500/20 backdrop-blur-md '>
+        <ul className='flex flex-row space-x-10 text-white text-base items-center'>
             <li><Link href="#hero">HERO</Link></li>
-            <li><Link href="#aboutme">ABOUT ME</Link></li>
+            <li><Link href="#aboutme">ABOUT</Link></li>
             <li><Link href="#portfolio">PORTFOLIO</Link></li>
             <li><Link href="#connect">CONNECT</Link></li>
         </ul>

@@ -14,16 +14,17 @@ const Hobbies = () => {
         backDelay={5000}
         loop
         className="
-              sm:text-5xl
-              md:text-5xl
-              lg:text-7xl
-              font-bold
-              bg-gradient-to-b   
-              to-[#FBE9D0]
-              from-[#003135]
-              bg-clip-text        
-              text-transparent 
-            "
+          text-5xl
+          sm:text-5xl
+          md:text-7xl
+          lg:text-7xl       
+          font-bold
+          bg-gradient-to-b   
+          to-[#FBE9D0]
+          from-[#003135]
+          bg-clip-text       
+          text-transparent  
+        "
       />
     </div>
   );

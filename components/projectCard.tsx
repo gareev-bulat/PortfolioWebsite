@@ -25,7 +25,7 @@ const PATHS = {
 
 const GITHUB_links = {
 
-  PawNav: 'https://github.com/gareev-bulat/PawNav.git',
+  "PawNav": 'https://github.com/gareev-bulat/PawNav.git',
   "HeadlineTrader": 'https://github.com/gareev-bulat/HeadlineTrader.git',
   "CurrencyConverter": 'https://github.com/gareev-bulat/HeadlineTrader.git',
 
@@ -47,7 +47,7 @@ type CardProps = {
 
 const projectCard = ({ name, image, tools, dataFrame }: CardProps) => {
   return (
-    <div className="w-[600px] h-[450px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80 ">
+    <div className="w-[500px] h-[450px] sm:w-[500px]  md:w-[700px] lg:w-[700px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80 ">
       <div className="relative w-full h-full bg-white flex items-center justify-center">
         <Image
           src={image}
