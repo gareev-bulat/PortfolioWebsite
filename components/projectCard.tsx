@@ -27,7 +27,7 @@ const GITHUB_links = {
 
   "PawNav": 'https://github.com/gareev-bulat/PawNav.git',
   "HeadlineTrader": 'https://github.com/gareev-bulat/HeadlineTrader.git',
-  "CurrencyConverter": 'https://github.com/gareev-bulat/HeadlineTrader.git',
+  "CurrencyConverter": 'https://github.com/gareev-bulat/Currency-Converter.git',
 
 
 }

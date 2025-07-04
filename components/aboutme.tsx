@@ -36,8 +36,7 @@ const Aboutme = () => {
               and web projects
             </p>
             <p className="font-light text-base">
-              When I’m not shipping side projects you’ll find me in the gym, on
-              the mic, or jamming on guitar.
+              I enjoy going to the gym, singing, and playing the guitar. I’m always seeking new connections in the Big Tech world!
             </p>
           </article>
           <article className="card w-[470px] sm:w-[640px] md:w-[480px]">
