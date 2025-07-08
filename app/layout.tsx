@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "@/styles/globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import SideNavBar from "@/components/sidenavbar";
 
 
 const roboto = localFont({
@@ -34,8 +33,11 @@ export const metadata: Metadata = {
   description: "Welcome to my personal portfolio website!",
   icons: {
     icon: "/images/logo.png",
-
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  }
 };
 
 export default function RootLayout({

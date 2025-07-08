@@ -24,8 +24,8 @@ const Aboutme = () => {
       <h2 className="text-3xl text-white text-center sm:text-3xl lg:text-5xl p-4">
         About me
       </h2>
-      <div className="grid grid-cols-1 bs:grid-cols-2 sm:grid-cols-1 p-6 mx-auto max-w-5xl gap-10">
-          <article className="card w-[470px] sm:w-[640px] md:w-[480px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mx-auto max-w-5xl">
+          <article className="card w-full max-w-md mx-auto p-4">
             <h1 className="pb-10 text-base_l lg:text-lg">Who I Am</h1>
             <p className="mb-7 font-light text-base">
               <span className="text-brand-200 font-semibold">
@@ -39,9 +39,8 @@ const Aboutme = () => {
               I enjoy going to the gym, singing, and playing the guitar. I’m always seeking new connections in the Big Tech world!
             </p>
           </article>
-          <article className="card w-[470px] sm:w-[640px] md:w-[480px]">
+          <article className="card w-full max-w-md mx-auto p-4">
             <h1 className="pb-4 text-base_l lg:text-lg">Education</h1>
-
             <ul className="mt-5 space-y-5 font-semibold text-base_l">
               <li className="font-light">
                 <span className="font-bold">Major: </span>BS in Computer Science
@@ -65,9 +64,7 @@ const Aboutme = () => {
               </li>
             </ul>
           </article>
-        
-     
-          <article className="card w-[470px] sm:w-[640px] md:w-[480px] pb-7 pt-7 pr-7 pl-5">
+          <article className="card w-full max-w-md mx-auto p-4">
             <h1 className="pb-7 text-base_l lg:text-lg">Skills</h1>
             <div className="flex flex-1">
               <nav className="flex flex-col w-35 mr-6">
@@ -96,7 +93,7 @@ const Aboutme = () => {
               </section>
             </div>
           </article>
-          <article className="card w-[470px] sm:w-[640px] md:w-[480px]">
+          <article className="card w-full max-w-md mx-auto p-4">
             <h1 className="pb-4 text-base_l lg:text-lg">Values</h1>
             <ul className="list-none list-inside ml-2 space-y-3 marker:text-brand-500">
               <li className="font-light">

@@ -1,14 +1,42 @@
 import React from 'react'
 
-
 const Footer = () => {
   return (
-    <footer className="h-[230px] mx-20 px-6 flex flex-col items-center justify-center rounded-t-3xl bg-[linear-gradient(180deg,_#0FA4AF_0%,_#895040_89%)] mt-10">
-        <h3 className='-mt-4 text-2xl tracking-[0.4em] text-white text-center'>BULAT GAREEV</h3>
-        <div className='relative text-sm top-12 text-white text-center tracking-[0.4em]'>@2025 Copyright</div>
-        <div className='relative text-sm top-12 pt-5 text-white text-center tracking-[0.3em]'>All rights reserved by Bulat Gareev</div>
+    <footer className="bg-[linear-gradient(180deg,#0FA4AF_0%,#895040_89%)] rounded-t-3xl mt-10">
+      <div className="
+          max-w-5xl mx-auto        
+          px-4 sm:px-6 lg:px-20    
+          py-8                    
+          flex flex-col items-center
+          space-y-2             
+        ">
+        <h3 className="
+            text-xl sm:text-2xl    
+            font-semibold
+            tracking-widest
+            text-white
+            text-center
+          ">
+          BULAT GAREEV
+        </h3>
+        <p className="
+            text-sm sm:text-base
+            tracking-wider
+            text-white
+            text-center
+          ">
+          © 2025 Bulat Gareev
+        </p>
+        <p className="
+            text-xs sm:text-sm
+            tracking-wide
+            text-white
+            text-center
+          ">
+          All rights reserved
+        </p>
+      </div>
     </footer>
-
   )
 }
 

@@ -1,26 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 function Header() {
   return (
-    <header className="h-header mx-20 px-6 flex items-center rounded-b-3xl bg-[#002123]">
-      <span className="hidden sm:inline">
-      <Image
-        src="/images/logo.png"
-        className="m-4"
-        width={60}
-        height={60}
-        alt="logo"
-        priority
-      />
-      </span>
-      <div className="flex-1" />
-      <nav className="flex gap-10 md:gap-12 md:text-base_l lg:text-base_l tracking-widest text-white">
-        <Link href="/">HOME</Link>
-        <Link href="/experience">EXPERIENCE</Link>
-        <Link href="/hobbies">HOBBIES</Link>
-      </nav>
+    <header className="bg-[#002123]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16 sm:h-header rounded-b-3xl">
+        <Link href="/" className="mr-4">
+          <Image src="/images/logo.png" width={48} height={48} alt="logo" />
+        </Link>
+
+        <div className="flex-1" />
+
+        <nav className="flex gap-6 sm:gap-10 text-white text-sm sm:text-base tracking-wide">
+          <Link href="/">HOME</Link>
+          <Link href="/experience">EXPERIENCE</Link>
+          <Link href="/hobbies">HOBBIES</Link>
+        </nav>
+      </div>
     </header>
   );
 }

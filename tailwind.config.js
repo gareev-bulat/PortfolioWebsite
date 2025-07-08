@@ -30,7 +30,7 @@ module.exports = {
         9: "36px",
         10: "40px",
         11: "44px",
-        header: "72px",
+        header: "80px",
       },
 
       fontSize: {
@@ -64,8 +64,7 @@ module.exports = {
         xs: "375px",
         sm: "640px",
         md: "768px",
-        bs: "960px",
-        lg: "1024pdfx",
+        lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
       },
