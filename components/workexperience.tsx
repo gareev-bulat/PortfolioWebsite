@@ -13,7 +13,7 @@ type WorkItem = {
 const ITEMS: WorkItem[] = [
     {
         name: "URBN, Nuuly",
-        image: '/images/workicons/urbn.jpg',
+        image: '/images/workIcons/urbn.jpg',
         position: "Android Engineer",
         id: 1,
 
