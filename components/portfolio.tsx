@@ -8,7 +8,7 @@ type PortfolioItem = {
     name: string,
     image: string,
     tools: ToolKey[],
-    data: string[],
+    date: string,
     id: number,
 
 }
@@ -18,7 +18,7 @@ const ITEMS: PortfolioItem[] = [
         name: "PawNav",
         image: '/images/projectIcons/PawNav_project.png',
         tools: ['ReactNative', 'JavaScript', 'GitLab', 'Firebase', 'Git', 'VSCode', 'Figma'],
-        data: ["January - June", '2025'],
+        date: "January - June 2025",
         id: 1,
 
     },
@@ -26,7 +26,7 @@ const ITEMS: PortfolioItem[] = [
         name: "HeadlineTrader",
         image: '/images/projectIcons/HeadlineTrader_project.png',
         tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Gemini', 'MongoDB', 'VSCode'],
-        data: ["April", '2025'],
+        date: "April 2025",
         id: 2,
 
     },
@@ -34,7 +34,7 @@ const ITEMS: PortfolioItem[] = [
         name: "CurrencyConverter",
         image: '/images/projectIcons/CurrencyConverter_project.png',
         tools: ['Java', 'AndroidStudio', 'VSCode'],
-        data: ["January - April", '2024'],
+        date: "January - April 2024",
         id: 3,
 
     },
@@ -46,7 +46,7 @@ const Portfolio = () => {
     <h2 className="text-3xl text-white text-center sm:text-3xl lg:text-5xl p-10">Portfolio</h2>
     <div className='grid justify-center gap-10 mb-20'>
         {ITEMS.map((item) => (      
-            <ProjectCard key={item.id} name={item.name} image={item.image} tools={item.tools} dataFrame={item.data} />
+            <ProjectCard key={item.id} name={item.name} image={item.image} tools={item.tools} date={item.date} />
         ))}
     </div>
   

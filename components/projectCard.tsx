@@ -39,15 +39,17 @@ type CardProps = {
   name: string;
   image: string;
   tools: ToolKey[];
-  dataFrame: string[];
+  date: string;
 };
 
 
 
 
-const projectCard = ({ name, image, tools, dataFrame }: CardProps) => {
+const projectCard = ({ name, image, tools, date }: CardProps) => {
+
   return (
-    <div className="w-[500px] h-[450px] sm:w-[500px]  md:w-[700px] lg:w-[700px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80 ">
+    <div className="w-[500px] h-[450px] sm:w-[500px]  md:w-[700px] lg:w-[700px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80
+     cursor-pointer pendulum-hover">
       <div className="relative w-full h-full bg-white flex items-center justify-center">
         <Image
           src={image}
@@ -60,7 +62,7 @@ const projectCard = ({ name, image, tools, dataFrame }: CardProps) => {
           <div className="relative flex flex-row mb-2">
           <div className="text-3xl">{name}</div>
           {name in GITHUB_links && (
-            <Link href={GITHUB_links[name as keyof typeof GITHUB_links]}>
+            <Link className="animate-bounce" href={GITHUB_links[name as keyof typeof GITHUB_links]}>
               <Image className="-mt-3 ml-2" src={PATHS["GitHub"]} width={55} height={55} alt="GitHub" />
             </Link>
           )}

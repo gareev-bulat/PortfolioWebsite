@@ -30,8 +30,8 @@ const Aboutme = () => {
             <p className="mb-7 font-light text-base">
               <span className="text-brand-200 font-semibold">
                 I’m Bulat Gareev
-              </span>{""}
-              ,a first-year Computer Science student. Ever since coding captured
+              </span>{", "}
+              a second-year Computer Science student. Ever since coding captured
               my attention in high school, I’ve been shipping both mobile apps
               and web projects
             </p>

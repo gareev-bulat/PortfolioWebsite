@@ -4,6 +4,7 @@ import Aboutme from "@/components/aboutme";
 import Portfolio from "@/components/portfolio";
 import Connect from "@/components/connect";
 import SideNavBar from "@/components/sidenavbar";
+import WorkExperience from "@/components/workexperience";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
             />
 
             <Link
-              href="/docs/BulatGareevResume.pdf"
+              href="/docs/BulatGareevResume_fromFeb2026.pdf"
               download
               className="mt-4 inline-flex items-center space-x-2
                          bg-brand-500 hover:bg-brand-700 text-white
@@ -85,6 +86,7 @@ export default function Home() {
       </section>
 
       <Aboutme />
+      <WorkExperience />
       <Portfolio />
       <Connect />
     </div>
