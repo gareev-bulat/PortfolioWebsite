@@ -54,7 +54,7 @@ const ExperienceCard = ({ name, image, position }: CardProps) => {
               alt={name}
               width={200}
               height={210}
-              className="opacity-60"
+              className="opacity-90"
             />
             <div className="flex flex-col gap-8">
               <div className="flex flex-row gap-4">

@@ -1,39 +1,42 @@
 import React from "react";
 import Image from "next/image";
-import Link from 'next/link'
-
+import Link from "next/link";
 
 const PATHS = {
-
-  'ReactNative': '/images/icons/react-native.svg',
-  'JavaScript': '/images/icons/javascript.svg',
-  'GitLab': '/images/icons/gitlab.svg',
-  'Firebase': '/images/icons/firebase.svg',
-  'Git': '/images/icons/git.svg',
-  'VSCode': '/images/icons/vscode.svg',
-  'Figma': '/images/icons/figma.svg',
-  'NextJs': '/images/icons/nextjs.png',
-  'TypeScript': '/images/icons/typescript.svg',
-  'Gemini': '/images/icons/gemini.svg',
-  'MongoDB': '/images/icons/mongoDB.svg',
-  'Java': '/images/icons/java.svg',
-  'AndroidStudio': '/images/icons/android-studio.svg',
-  'GitHub': '/images/icons/github.svg',
-  'TailwindCSS': '/images/icons/tailwind.svg'
-
+  ReactNative: "/images/icons/react-native.svg",
+  JavaScript: "/images/icons/javascript.svg",
+  GitLab: "/images/icons/gitlab.svg",
+  Firebase: "/images/icons/firebase.svg",
+  Git: "/images/icons/git.svg",
+  VSCode: "/images/icons/vscode.svg",
+  Figma: "/images/icons/figma.svg",
+  NextJs: "/images/icons/nextjs.png",
+  TypeScript: "/images/icons/typescript.svg",
+  Gemini: "/images/icons/gemini.svg",
+  MongoDB: "/images/icons/MongoDB.svg",
+  Java: "/images/icons/java.svg",
+  AndroidStudio: "/images/icons/android-studio.svg",
+  GitHub: "/images/icons/github.svg",
+  TailwindCSS: "/images/icons/tailwind.svg",
+  Swift: "/images/icons/swift.svg",
+  SwiftUI: "/images/icons/swiftUI.svg",
+  Kotlin: "/images/icons/kotlin.svg",
+  Jetpack: "/images/icons/jetpack.svg",
+  Supabase: "/images/icons/supabase.svg",
+  React: "/images/icons/react.svg",
+  Groq: "/images/icons/groq.svg",
+  Xcode: "/images/icons/Xcode.svg",
 };
 
 const GITHUB_links = {
-
-  "PawNav": 'https://github.com/gareev-bulat/PawNav.git',
-  "HeadlineTrader": 'https://github.com/gareev-bulat/HeadlineTrader.git',
-  "CurrencyConverter": 'https://github.com/gareev-bulat/Currency-Converter.git',
-
-
-}
+  PawNav: "https://github.com/gareev-bulat/PawNav.git",
+  HeadlineTrader: "https://github.com/gareev-bulat/HeadlineTrader.git",
+  CurrencyConverter: "https://github.com/gareev-bulat/Currency-Converter.git",
+  CoopCompass: "https://github.com/gareev-bulat/Co-Op-Compass.git",
+  RESET: "https://github.com/gareev-bulat/RESET.git",
+};
 
 export type ToolKey = keyof typeof PATHS;
-
 
 type CardProps = {
   name: string;
@@ -42,34 +45,47 @@ type CardProps = {
   date: string;
 };
 
-
-
-
 const projectCard = ({ name, image, tools, date }: CardProps) => {
-
   return (
-    <div className="w-[500px] h-[450px] sm:w-[500px]  md:w-[700px] lg:w-[700px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80
-     cursor-pointer pendulum-hover">
+    <div
+      className="w-[500px] h-[450px] sm:w-[500px]  md:w-[700px] lg:w-[700px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80
+     cursor-pointer pendulum-hover"
+    >
       <div className="relative w-full h-full bg-white flex items-center justify-center">
         <Image
           src={image}
           alt={name}
           width={200}
           height={210}
-          className="opacity-60 mb-20"
+          className="opacity-90 mb-20"
         />
         <div className="absolute left-5 bottom-2 flex flex-col">
           <div className="relative flex flex-row mb-2">
-          <div className="text-3xl">{name}</div>
-          {name in GITHUB_links && (
-            <Link className="animate-bounce" href={GITHUB_links[name as keyof typeof GITHUB_links]}>
-              <Image className="-mt-3 ml-2" src={PATHS["GitHub"]} width={55} height={55} alt="GitHub" />
-            </Link>
-          )}
+            <div className="text-3xl">{name}</div>
+            {name in GITHUB_links && (
+              <Link
+                className="animate-bounce"
+                href={GITHUB_links[name as keyof typeof GITHUB_links]}
+              >
+                <Image
+                  className="-mt-3 ml-2"
+                  src={PATHS["GitHub"]}
+                  width={55}
+                  height={55}
+                  alt="GitHub"
+                />
+              </Link>
+            )}
           </div>
           <div className="flex flex-row p-2 pt-0 gap-10">
             {tools.map((tool, index) => (
-              <Image key={index} width={60} height={60} src={PATHS[tool as keyof typeof PATHS]} alt={tool}/>
+              <Image
+                key={index}
+                width={60}
+                height={60}
+                src={PATHS[tool as keyof typeof PATHS]}
+                alt={tool}
+              />
             ))}
           </div>
         </div>

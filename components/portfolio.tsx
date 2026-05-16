@@ -15,29 +15,33 @@ type PortfolioItem = {
 
 const ITEMS: PortfolioItem[] = [
     {
+        name: "RESET",
+        image: '/images/projectIcons/RESET_project.png',
+        tools: ['Swift', 'SwiftUI', 'Xcode', 'Groq'],
+        date: "April - May 2026",
+        id: 1,
+    },
+    {
+        name: "CoopCompass",
+        image: '/images/projectIcons/CoopCompass_project.png',
+        tools: ['Swift', 'SwiftUI', 'Xcode', 'Groq'],
+        date: "April - Present",
+        id: 2,
+    },
+    {
         name: "PawNav",
         image: '/images/projectIcons/PawNav_project.png',
         tools: ['ReactNative', 'JavaScript', 'GitLab', 'Firebase', 'Git', 'VSCode', 'Figma'],
         date: "January - June 2025",
-        id: 1,
-
+        id: 3,
     },
     {
         name: "HeadlineTrader",
         image: '/images/projectIcons/HeadlineTrader_project.png',
         tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Gemini', 'MongoDB', 'VSCode'],
         date: "April 2025",
-        id: 2,
-
-    },
-    {
-        name: "CurrencyConverter",
-        image: '/images/projectIcons/CurrencyConverter_project.png',
-        tools: ['Java', 'AndroidStudio', 'VSCode'],
-        date: "January - April 2024",
-        id: 3,
-
-    },
+        id: 4,
+    }
 ]
 
 const Portfolio = () => {
