@@ -24,14 +24,14 @@ const ITEMS: PortfolioItem[] = [
     {
         name: "CoopCompass",
         image: '/images/projectIcons/CoopCompass_project.png',
-        tools: ['Swift', 'SwiftUI', 'Xcode', 'Groq'],
+        tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Supabase', 'VSCode'],
         date: "April - Present",
         id: 2,
     },
     {
         name: "PawNav",
         image: '/images/projectIcons/PawNav_project.png',
-        tools: ['ReactNative', 'JavaScript', 'GitLab', 'Firebase', 'Git', 'VSCode', 'Figma'],
+        tools: ['ReactNative', 'JavaScript', 'GitLab', 'Firebase', 'VSCode', 'Figma'],
         date: "January - June 2025",
         id: 3,
     },
