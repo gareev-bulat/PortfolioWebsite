@@ -41,7 +41,7 @@ export default function Home() {
               href="/docs/BulatGareevResumeJuly_26/BulatGareevResume.pdf"
               download
               className="mt-4 inline-flex items-center space-x-2
-                         bg-brand-500 hover:bg-brand-700 text-white
+                         bg-brand-900 hover:bg-brand-1000 text-white
                          rounded-full px-4 py-1 sm:py-3 lg:py-4 transition"
             >
               <Image
@@ -55,27 +55,27 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col text-white text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold">
               Bulat Gareev
             </h2>
-            <p className="mt-2 text-md sm:text-md lg:text-xl">
+            <p className="mt-2 text-md sm:text-md lg:text-xl text-brand-tealLight">
               I build interactive web & mobile apps
             </p>
             <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
               <Link className="bg-white text-black hover:bg-brand-1000 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded transition text-sm sm:text-base" href="mailto:gareevbulich63@gmail.com">
+                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base" href="mailto:gareevbulich63@gmail.com">
          
                   Gmail
               
               </Link>
               <Link href="https://github.com/gareev-bulat" className="bg-white text-black hover:bg-brand-0 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded transition text-sm sm:text-base">
+                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base">
                
                   GitHub
         
               </Link>
               <Link className="bg-white text-black hover:bg-brand-300 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded transition text-sm sm:text-base" href="https://www.linkedin.com/in/bulat-gareev-295a95338/">
+                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base" href="https://www.linkedin.com/in/bulat-gareev-295a95338/">
   
                   LinkedIn
 
