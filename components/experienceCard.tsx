@@ -24,14 +24,12 @@ const ExperienceCard = ({ name, image, position, bullets }: CardProps) => {
     md:w-[700px] 
     lg:w-[700px] 
     rounded-3xl 
-    overflow-hidden 
-    ring-2
-     ring-white/50
-      hover:ring-white/80
+    border-[7px]
+    border-brand-700
       cursor-pointer ${flipped ? "" : "pendulum-hover"}`}
     >
       <div
-        className="w-full h-full bg-white flex flex-row items-center justify-stretch gap-20 px-6"
+        className="perspective w-full h-full bg-brand-teal flex flex-row items-center justify-center gap-6 px-6"
         onClick={() => setFlipped(!flipped)}
       >
         <div
@@ -39,11 +37,11 @@ const ExperienceCard = ({ name, image, position, bullets }: CardProps) => {
             flipped ? "rotate-y-180" : ""
           }`}
         >
-          <div className="absolute w-full h-full backface-hidden bg-white rounded-3xl ring-2 ring-white/50 flex items-center justify-center gap-6">
+          <div className="absolute inset-0 backface-hidden bg-brand-teal rounded-3xl flex items-center justify-center gap-6">
 
             {!flipped && (
   <div className="absolute bottom-6 left-1/2 -translate-x-1/2 
-                  text-sm text-black/60 
+                  text-sm text-brand-700/60 
                   animate-bounce">
     Click to flip 
   </div>
@@ -57,25 +55,24 @@ const ExperienceCard = ({ name, image, position, bullets }: CardProps) => {
             />
             <div className="flex flex-col gap-8">
               <div className="flex flex-row gap-4">
-                <FaBuilding color="orange" size={36} />
-                <div className="text-3xl">{name}</div>
+                <FaBuilding className="text-brand-1000" size={36} />
+                <div className="font-display text-3xl text-brand-700">{name}</div>
               </div>
 
               <div className="flex flex-row gap-4">
-                <BsFilePerson color="orange" size={36} />
-                <div className="text-3xl">{position}</div>
+                <BsFilePerson className="text-brand-1000" size={36} />
+                <div className="text-3xl text-brand-700">{position}</div>
               </div>
             </div>
           </div>
 
-          <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white text-black rounded-3xl flex items-center justify-center">
+          <div className="absolute inset-0 backface-hidden rotate-y-180 bg-brand-700 text-brand-200 rounded-3xl flex items-center justify-center">
         
             <ul className="list-disc pl-6 space-y-5">
                 {bullets.map((bullet, i) => (
-                  <li key={i} className="text-base">{bullet}</li>
+                    <li key={i} className="text-base">{bullet}</li>
                 ))}
             </ul>
-
 
           </div>
         </div>
