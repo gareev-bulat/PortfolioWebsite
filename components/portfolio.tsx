@@ -21,18 +21,18 @@ const ITEMS: PortfolioItem[] = [
         id: 0,
     },
     {
-        name: "RESET",
-        image: '/images/projectIcons/RESET_project.png',
-        tools: ['Swift', 'SwiftUI', 'Xcode', 'Groq'],
-        date: "April - May 2026",
-        id: 1,
-    },
-    {
         name: "CoopCompass",
         image: '/images/projectIcons/CoopCompass_project.png',
         tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Python', 'Supabase', 'VSCode'],
         date: "April - Present",
         id: 2,
+    },
+    {
+        name: "RESET",
+        image: '/images/projectIcons/RESET_project.png',
+        tools: ['Swift', 'SwiftUI', 'Xcode', 'Groq'],
+        date: "April - May 2026",
+        id: 1,
     },
     {
         name: "PawNav",

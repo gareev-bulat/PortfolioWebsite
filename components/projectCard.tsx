@@ -35,6 +35,7 @@ const GITHUB_links = {
   CurrencyConverter: "https://github.com/gareev-bulat/Currency-Converter.git",
   CoopCompass: "https://github.com/gareev-bulat/Co-Op-Compass.git",
   RESET: "https://github.com/gareev-bulat/RESET.git",
+  Nomiyo: "https://github.com/gareev-bulat/Nomiyo.git",
 };
 
 export type ToolKey = keyof typeof PATHS;
