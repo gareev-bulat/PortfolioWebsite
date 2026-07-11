@@ -1,9 +1,7 @@
 "use client";
 
-import React from "react";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { BsFilePerson } from "react-icons/bs";
 import { FaBuilding } from "react-icons/fa";
 
@@ -11,9 +9,10 @@ type CardProps = {
   name: string;
   image: string;
   position: string;
+  bullets: string[];
 };
 
-const ExperienceCard = ({ name, image, position }: CardProps) => {
+const ExperienceCard = ({ name, image, position, bullets }: CardProps) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -72,10 +71,9 @@ const ExperienceCard = ({ name, image, position }: CardProps) => {
           <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white text-black rounded-3xl flex items-center justify-center">
         
             <ul className="list-disc pl-6 space-y-5">
-                <li className="text-base">Developed production-ready Android features using Kotlin and Jetpack Compose, collaborating with Android Engineers, backend developers, and UX designers.</li>
-                <li className="text-base">Collaborated with backend and UX teams to reduce requirement ambiguity and improve development efficiency</li>
-                <li className="text-base"> Built an internal Android application to automate Nuuly packages’ return workflow, improving operational efficiency for employees</li>
-                <li className="text-base">Implemented hardware integration for USB scanner devices via Android broadcast events</li>
+                {bullets.map((bullet, i) => (
+                  <li key={i} className="text-base">{bullet}</li>
+                ))}
             </ul>
 
 
