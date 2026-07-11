@@ -59,7 +59,7 @@ export default function Home() {
               Bulat Gareev
             </h2>
             <p className="mt-2 text-md sm:text-md lg:text-xl text-brand-tealLight">
-              I build interactive web & mobile apps
+              I build AI-powered web & mobile apps
             </p>
             <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
               <Link className="bg-white text-black hover:bg-brand-1000 hover:text-white
