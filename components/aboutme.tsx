@@ -1,12 +1,11 @@
 "use client";
 
-import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
 
 
 const SKILL_GROUPS = {
-    "Languages": ["Python", "C++", "Java", "JavaScript", "TypeScript"],
+    "Languages": ["Python", "TypeScript", "JavaScript", "Java", "Kotlin", "Swift"],
     "FrontEnd": ["React", "Next.js", "HTML5", "CSS3", "Tailwind CSS"],
     "MobileDev": ["React Native", "Android Studio"],
     "BackEnd&Cloud": ["Flask", "Django", "SQLite", "Firebase"],
@@ -31,9 +30,11 @@ const Aboutme = () => {
               <span className="text-brand-200 font-semibold">
                 I’m Bulat Gareev
               </span>{", "}
-              a second-year Computer Science student. Ever since coding captured
-              my attention in high school, I’ve been shipping both mobile apps
-              and web projects
+              a Computer Science student at Drexel University. 
+              Ever since coding captured my attention in high school, 
+              I've been shipping mobile and web projects — most recently as an 
+              Android Engineering Co-op at Urban Outfitters, where I built and 
+              shipped production features used by real warehouse teams.
             </p>
             <p className="font-light text-base">
               I enjoy going to the gym, singing, and playing the guitar. I’m always seeking new connections in the Big Tech world!
@@ -43,7 +44,7 @@ const Aboutme = () => {
             <h1 className="pb-4 text-base_l lg:text-lg">Education</h1>
             <ul className="mt-5 space-y-5 font-semibold text-base_l">
               <li className="font-light">
-                <span className="font-bold">Major: </span>BS in Computer Science
+                <span className="font-bold">Major: </span>BS in Computer Science, minor in Data Science
               </li>
               <li className="flex flex-row gap-2">
                 <Image
@@ -60,7 +61,7 @@ const Aboutme = () => {
                 2029
               </li>
               <li className="font-light">
-                <span className="font-bold">Current GPA: </span>3.64
+                <span className="font-bold">Current GPA: </span>3.63
               </li>
             </ul>
           </article>
