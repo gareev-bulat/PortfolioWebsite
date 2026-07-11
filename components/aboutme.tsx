@@ -25,13 +25,9 @@ const Aboutme = () => {
           <h1 className="font-display pb-4 text-base_l lg:text-lg">Who I Am</h1>
           <p className="mb-7 font-light text-base">
             <span className="text-brand-200 font-semibold">
-              I’m Bulat Gareev
+              I’m a Computer Science student
             </span>
-            {", "}a Computer Science student at Drexel University. Ever since
-            coding captured my attention in high school, I've been shipping
-            mobile and web projects — most recently as an Android Engineering
-            Co-op at Urban Outfitters, where I built and shipped production
-            features used by real warehouse teams.
+            {", "}at Drexel University who has been building mobile and web applications since high school. Most recently, I worked as an Android Engineering Co-op at Urban Outfitters, where I developed and shipped production features used by warehouse teams in their day-to-day operations.
           </p>
           <p className="font-light text-base">
             I enjoy going to the gym, singing, and playing the guitar. I’m
