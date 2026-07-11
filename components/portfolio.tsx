@@ -1,4 +1,3 @@
-import React from 'react'
 import ProjectCard from './projectCard'
 import type { ToolKey } from './projectCard'
 
@@ -15,6 +14,13 @@ type PortfolioItem = {
 
 const ITEMS: PortfolioItem[] = [
     {
+        name: "Nomiyo",
+        image: '/images/projectIcons/Nomiyo_project.png',
+        tools: ['ReactNative', 'TypeScript', 'LiveKit', 'Firebase'],
+        date: "June 2026 - Present",
+        id: 0,
+    },
+    {
         name: "RESET",
         image: '/images/projectIcons/RESET_project.png',
         tools: ['Swift', 'SwiftUI', 'Xcode', 'Groq'],
@@ -24,7 +30,7 @@ const ITEMS: PortfolioItem[] = [
     {
         name: "CoopCompass",
         image: '/images/projectIcons/CoopCompass_project.png',
-        tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Supabase', 'VSCode'],
+        tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Python', 'Supabase', 'VSCode'],
         date: "April - Present",
         id: 2,
     },
@@ -53,9 +59,6 @@ const Portfolio = () => {
             <ProjectCard key={item.id} name={item.name} image={item.image} tools={item.tools} date={item.date} />
         ))}
     </div>
-  
-
-  
     </section>
   )
 }

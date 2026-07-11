@@ -25,7 +25,7 @@ const Footer = () => {
             text-white
             text-center
           ">
-          © 2025 Bulat Gareev
+          © 2026 Bulat Gareev
         </p>
         <p className="
             text-xs sm:text-sm

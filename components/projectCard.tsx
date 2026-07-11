@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,6 +25,8 @@ const PATHS = {
   React: "/images/icons/react.svg",
   Groq: "/images/icons/groq.svg",
   Xcode: "/images/icons/Xcode.svg",
+  Python: "/images/icons/python.svg",
+  LiveKit: '/images/icons/livekit.svg',
 };
 
 const GITHUB_links = {
