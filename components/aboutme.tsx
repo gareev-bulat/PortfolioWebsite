@@ -25,7 +25,7 @@ const Aboutme = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mx-auto max-w-5xl">
           <article className="card w-full max-w-md mx-auto p-4">
-            <h1 className="pb-10 text-base_l lg:text-lg">Who I Am</h1>
+            <h1 className="pb-5 text-base_l lg:text-lg">Who I Am</h1>
             <p className="mb-7 font-light text-base">
               <span className="text-brand-200 font-semibold">
                 I’m Bulat Gareev
@@ -33,8 +33,7 @@ const Aboutme = () => {
               a Computer Science student at Drexel University. 
               Ever since coding captured my attention in high school, 
               I've been shipping mobile and web projects — most recently as an 
-              Android Engineering Co-op at Urban Outfitters, where I built and 
-              shipped production features used by real warehouse teams.
+              Android Engineering Co-op at Urban Outfitters, where I built and shipped production features used by real warehouse teams.
             </p>
             <p className="font-light text-base">
               I enjoy going to the gym, singing, and playing the guitar. I’m always seeking new connections in the Big Tech world!
