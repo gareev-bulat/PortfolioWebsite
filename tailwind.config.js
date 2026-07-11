@@ -15,6 +15,8 @@ module.exports = {
       fontFamily: {
         roboto: ["var(--font-roboto)", ...defaultTheme.fontFamily.sans],
         sans: ["var(--font-roboto)", ...defaultTheme.fontFamily.sans],
+        display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
       },
 
       spacing: {
@@ -37,7 +39,7 @@ module.exports = {
         xs: ["12px", { lineHeight: "16px" }],
         sm: ["14px", { lineHeight: "40px" }],
         base: ["18px", { lineHeight: "24px" }],
-        base_l: ["22px", {lineHeight: '28px'}],
+        base_l: ["22px", { lineHeight: "28px" }],
         lg: ["28px", { lineHeight: "28px" }],
         h1: ["40px", { lineHeight: "45px" }],
       },
@@ -50,13 +52,15 @@ module.exports = {
 
       colors: {
         brand: {
-          300: "#2868B2", //dark-blue
-          500: "#024950",  //dark-green
-          700: "#003135", //darkest-green
-          900: "#964734", //brown
-          1000: "#E64833", //red
-          0: "#000000", //black
-          200: "#FBE9D0", //milk-color
+          300: "#2868B2",
+          500: "#024950",
+          700: "#003135",
+          900: "#964734",
+          1000: "#E64833",
+          0: "#000000",
+          200: "#FBE9D0",
+          teal: "#0FA4AF",
+          tealLight: "#AFDDE5",
         },
       },
 

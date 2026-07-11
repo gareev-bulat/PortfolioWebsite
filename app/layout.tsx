@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next"
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 
 
 const roboto = localFont({
@@ -25,6 +26,21 @@ const roboto = localFont({
       weight: '300',
     },
   ],
+  variable: "--font-roboto",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -47,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${roboto.className} scroll-smooth`}>
+    <html lang="en" className={`${roboto.className} ${spaceGrotesk.variable} ${jetbrainsMono.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-[linear-gradient(180deg,_#003135_4%,_#024950_56%)]">
         <Header />
         <main>{children}</main>
