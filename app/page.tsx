@@ -6,6 +6,7 @@ import Connect from "@/components/connect";
 import SideNavBar from "@/components/sidenavbar";
 import WorkExperience from "@/components/workexperience";
 import LeetCode from "@/components/leetcode";
+import Impact from "@/components/impact";
 
 export default function Home() {
   return (
@@ -88,6 +89,7 @@ export default function Home() {
 
       <Aboutme />
       <WorkExperience />
+      <Impact />
       <Portfolio />
       <LeetCode />
       <Connect />
