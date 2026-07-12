@@ -12,7 +12,7 @@ const PATHS = {
   NextJs: "/images/icons/nextjs.png",
   TypeScript: "/images/icons/typescript.svg",
   Gemini: "/images/icons/gemini.svg",
-  MongoDB: "/images/icons/MongoDB.svg",
+  MongoDB: "/images/icons/mongoDB.svg",
   Java: "/images/icons/java.svg",
   AndroidStudio: "/images/icons/android-studio.svg",
   GitHub: "/images/icons/github.svg",
