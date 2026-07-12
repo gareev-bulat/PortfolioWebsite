@@ -12,9 +12,21 @@ function Header() {
         <div className="flex-1" />
 
         <nav className="flex gap-6 sm:gap-10 text-brand-200 text-sm sm:text-base tracking-wide">
-          <Link href="/" className="hover:text-brand-teal transition">HOME</Link>
-          <Link href="/experience" className="hover:text-brand-teal transition">EXPERIENCE</Link>
-          <Link href="/hobbies" className="hover:text-brand-teal transition">HOBBIES</Link>
+          <Link href="#aboutme" className="hover:text-brand-teal transition">
+            ABOUT
+          </Link>
+          <Link
+            href="#workexperience"
+            className="hover:text-brand-teal transition"
+          >
+            EXPERIENCE
+          </Link>
+          <Link href="#portfolio" className="hover:text-brand-teal transition">
+            PROJECTS
+          </Link>
+          <Link href="#connect" className="hover:text-brand-teal transition">
+            CONTACT
+          </Link>
         </nav>
       </div>
     </header>
