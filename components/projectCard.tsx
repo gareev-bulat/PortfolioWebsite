@@ -26,7 +26,7 @@ const PATHS = {
   Groq: "/images/icons/groq.svg",
   Xcode: "/images/icons/Xcode.svg",
   Python: "/images/icons/python.svg",
-  LiveKit: '/images/icons/livekit.svg',
+  LiveKit: "/images/icons/livekit.svg",
 };
 
 const GITHUB_links = {
@@ -44,50 +44,62 @@ type CardProps = {
   name: string;
   image: string;
   tools: ToolKey[];
-  date: string;
+  description: string;
 };
 
-const projectCard = ({ name, image, tools, date }: CardProps) => {
+const projectCard = ({ name, image, tools, description }: CardProps) => {
   return (
-    <div
-      className="w-[500px] h-[450px] sm:w-[500px]  md:w-[700px] lg:w-[700px] rounded-3xl overflow-hidden ring-2 ring-white/50 hover:ring-white/80
-     cursor-pointer pendulum-hover"
-    >
-      <div className="relative w-full h-full bg-white flex items-center justify-center">
+    <div className="w-full rounded-3xl border-[7px] border-brand-700 bg-brand-teal text-brand-700 p-6 cursor-pointer pendulum-hover transition-all duration-500 hover:bg-brand-tealLight">
+      <div className="flex flex-col sm:flex-row gap-6">
         <Image
           src={image}
           alt={name}
-          width={200}
-          height={210}
-          className="opacity-90 mb-20"
+          width={140}
+          height={170}
+          className="rounded-2xl object-cover shrink-0 self-start"
         />
-        <div className="absolute left-5 bottom-2 flex flex-col">
-          <div className="relative flex flex-row mb-2">
-            <div className="text-3xl">{name}</div>
+
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-row items-center gap-3">
+            <div className="font-display text-2xl sm:text-3xl">{name}</div>
             {name in GITHUB_links && (
               <Link
-                className="animate-bounce"
                 href={GITHUB_links[name as keyof typeof GITHUB_links]}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`View ${name} on GitHub`}
+                className="animate-bounce flex items-center gap-1.5 bg-brand-700 hover:bg-brand-1000 text-brand-200 rounded-full px-3 py-1.5 transition-colors"
               >
                 <Image
-                  className="-mt-3 ml-2"
                   src={PATHS["GitHub"]}
-                  width={55}
-                  height={55}
-                  alt="GitHub"
+                  width={20}
+                  height={20}
+                  alt=""
+                  className="invert"
                 />
+                <span className="text-xs font-semibold">Code</span>
               </Link>
             )}
           </div>
-          <div className="flex flex-row p-2 pt-0 gap-10">
+
+          <p className="text-sm sm:text-base leading-relaxed font-normal">
+            {description}
+          </p>
+
+          <div className="flex flex-row flex-wrap gap-4 mt-1">
             {tools.map((tool, index) => (
-              <Image
+              <div
                 key={index}
-                width={60}
-                height={60}
-                src={PATHS[tool as keyof typeof PATHS]}
-                alt={tool}
-              />
+                className="bg-white/90 rounded-lg p-1.5 flex items-center justify-center"
+              >
+                <Image
+                  width={28}
+                  height={28}
+                  src={PATHS[tool as keyof typeof PATHS]}
+                  alt={tool}
+                  title={tool}
+                />
+              </div>
             ))}
           </div>
         </div>
