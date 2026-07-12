@@ -23,7 +23,7 @@ const ITEMS: PortfolioItem[] = [
         name: "CoopCompass",
         image: '/images/projectIcons/CoopCompass_project.png',
         tools: ['NextJs', 'TypeScript', 'TailwindCSS', 'Python', 'Supabase', 'VSCode'],
-        date: "May - July 2026",
+        date: "May - June 2026",
         description: "Full-stack co-op application tracker, extended with a multi-agent AI pipeline (CrewAI + Claude API) that autonomously discovers, scores, and tailors postings. Cut inference cost ~3x through model benchmarking and caching.",
         id: 2,
     },
