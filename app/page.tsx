@@ -65,7 +65,7 @@ export default function Home() {
             </p>
             <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
               <Link className="bg-white text-black hover:bg-brand-1000 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base" href="mailto:gareevbulich63@gmail.com">
+                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base" href="#connect">
          
                   Gmail
               
