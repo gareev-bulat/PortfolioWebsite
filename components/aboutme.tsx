@@ -38,8 +38,10 @@ const Aboutme = () => {
           <h1 className="font-display pb-4 text-base_l lg:text-lg">Education</h1>
           <ul className="space-y-5 font-semibold text-base_l">
             <li className="font-light">
-              <span className="font-bold">Major: </span>BS in Computer Science,
-              minor in Data Science
+              <span className="font-bold">Major: </span>BS in Computer Science
+            </li>
+            <li className="font-light">
+              <span className="font-bold">Minor: </span>Data Science
             </li>
             <li className="flex flex-row gap-2">
               <Image
