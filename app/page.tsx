@@ -40,7 +40,7 @@ export default function Home() {
             />
 
             <Link
-              href="/docs/BulatGareevResumeJuly_26/BulatGareevResume.pdf"
+              href="/docs/BulatGareevResumeAugust_26/BulatGareevResume.pdf"
               download
               className="mt-4 inline-flex items-center space-x-2
                          bg-brand-900 hover:bg-brand-1000 text-white
