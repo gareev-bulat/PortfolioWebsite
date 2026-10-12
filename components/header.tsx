@@ -1,32 +1,25 @@
-import Image from "next/image";
 import Link from "next/link";
+
+const LINKS = [
+  ["#experience", "Experience"],
+  ["#projects", "Projects"],
+  ["#skills", "Skills"],
+];
 
 function Header() {
   return (
-    <header className="bg-brand-700 rounded-b-3xl">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-16 sm:h-header">
-        <Link href="/" className="mr-4">
-          <Image src="/images/logo.png" width={44} height={44} alt="logo" />
+    <header className="sticky top-0 z-20 bg-ink/90 backdrop-blur border-b border-paper/10">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-4 lg:px-14">
+        <Link href="/" aria-label="Back to top" className="font-display text-3xl font-bold tracking-[-0.06em]">
+          BG<span className="text-lime">.</span>
         </Link>
-
-        <div className="flex-1" />
-
-        <nav className="flex gap-6 sm:gap-10 text-brand-200 text-sm sm:text-base tracking-wide">
-          <Link href="#aboutme" className="hover:text-brand-teal transition">
-            ABOUT
-          </Link>
-          <Link
-            href="#workexperience"
-            className="hover:text-brand-teal transition"
-          >
-            EXPERIENCE
-          </Link>
-          <Link href="#portfolio" className="hover:text-brand-teal transition">
-            PROJECTS
-          </Link>
-          <Link href="#connect" className="hover:text-brand-teal transition">
-            CONTACT
-          </Link>
+        <nav aria-label="Primary" className="flex items-center gap-5 sm:gap-8 label">
+          {LINKS.map(([href, text]) => (
+            <Link key={href} href={href} className="hidden py-2 hover:text-lime transition sm:block">
+              {text}
+            </Link>
+          ))}
+          <Link href="#contact" className="py-2 text-lime">Contact ↗</Link>
         </nav>
       </div>
     </header>

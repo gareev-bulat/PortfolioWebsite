@@ -1,43 +1,14 @@
-import React from 'react'
+import Link from "next/link";
 
-const Footer = () => {
-  return (
-    <footer className="bg-[linear-gradient(180deg,#0FA4AF_0%,#895040_89%)] rounded-t-3xl mt-10">
-      <div className="
-          max-w-5xl mx-auto        
-          px-4 sm:px-6 lg:px-20    
-          py-8                    
-          flex flex-col items-center
-          space-y-2             
-        ">
-        <h3 className="
-            text-xl sm:text-2xl    
-            font-semibold
-            tracking-widest
-            text-white
-            text-center
-          ">
-          BULAT GAREEV
-        </h3>
-        <p className="
-            text-sm sm:text-base
-            tracking-wider
-            text-white
-            text-center
-          ">
-          © 2026 Bulat Gareev
-        </p>
-        <p className="
-            text-xs sm:text-sm
-            tracking-wide
-            text-white
-            text-center
-          ">
-          All rights reserved
-        </p>
-      </div>
-    </footer>
-  )
-}
+const Footer = () => (
+  <footer className="label mx-auto w-full flex max-w-[1440px] flex-wrap justify-between gap-3 px-5 py-8 lg:px-14">
+    <div>© 2026 Bulat Gareev · Drexel CS &apos;29</div>
+    <div className="flex flex-wrap gap-x-6">
+      <Link href="https://github.com/gareev-bulat" className="py-2 hover:text-lime">GitHub</Link>
+      <Link href="https://www.linkedin.com/in/bulat-gareev-295a95338/" className="py-2 hover:text-lime">LinkedIn</Link>
+      <Link href="#top" className="py-2 hover:text-lime">Back to top</Link>
+    </div>
+  </footer>
+);
 
-export default Footer
+export default Footer;
