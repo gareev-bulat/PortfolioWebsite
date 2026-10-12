@@ -64,9 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.className} ${spaceGrotesk.variable} ${jetbrainsMono.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-[linear-gradient(180deg,_#003135_4%,_#024950_56%)]">
+      <body className="min-h-screen flex flex-col bg-ink text-paper">
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
       </body>
