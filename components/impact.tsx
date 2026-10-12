@@ -36,7 +36,7 @@ const Counter = ({ stat, start }: { stat: Stat; start: boolean }) => {
   }, [start, stat.value]);
 
   return (
-    <span className="font-display text-4xl sm:text-5xl">
+    <span className="block font-display text-[clamp(64px,8vw,112px)] font-bold leading-[0.85] tracking-[-0.04em]">
       {stat.prefix}
       {n}
       {stat.suffix}
@@ -67,27 +67,14 @@ const Impact = () => {
   }, []);
 
   return (
-    <section id="impact">
-      <h2 className="font-display text-3xl text-white text-center sm:text-3xl lg:text-5xl p-10">
-        Impact
-      </h2>
-
-      <div ref={ref} className="max-w-4xl mx-auto px-6 mb-20">
-        <div className="flex flex-wrap justify-center gap-6">
-          {STATS.map((stat) => (
-            <div
-              key={stat.label}
-              className="w-[240px] rounded-3xl border-[7px] border-brand-700 bg-brand-teal text-brand-700 px-4 py-6 flex flex-col items-center text-center gap-2 cursor-pointer pendulum-hover transition-all duration-500 hover:bg-brand-tealLight"
-            >
-              <Counter stat={stat} start={visible} />
-              <p className="text-xs sm:text-sm leading-tight font-semibold opacity-80">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+    <div ref={ref} className="mt-16 flex flex-wrap gap-x-12 gap-y-8">
+      {STATS.map((stat) => (
+        <div key={stat.label} className="min-w-[240px] flex-1">
+          <Counter stat={stat} start={visible} />
+          <p className="label mt-3 text-[13px]">{stat.label}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 
