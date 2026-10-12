@@ -1,96 +1,65 @@
 import Image from "next/image";
 import Link from "next/link";
-import Aboutme from "@/components/aboutme";
-import Portfolio from "@/components/portfolio";
-import Connect from "@/components/connect";
-import SideNavBar from "@/components/sidenavbar";
+import Marquee from "@/components/marquee";
+import NowStrip from "@/components/nowstrip";
 import WorkExperience from "@/components/workexperience";
-import LeetCode from "@/components/leetcode";
+import Portfolio from "@/components/portfolio";
+import Aboutme from "@/components/aboutme";
 import Impact from "@/components/impact";
+import LeetCode from "@/components/leetcode";
+import Connect from "@/components/connect";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8 min-h-screen">
-      <section id="hero">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-20
-                        flex flex-col md:flex-row items-center justify-between
-                        py-12 relative">
-          <SideNavBar />
+    <div>
+      <section id="top" className="mx-auto max-w-[1440px] px-5 pb-14 pt-8 lg:px-14 lg:pt-14">
+        <div className="label text-mute">Drexel CS &apos;29 · Philadelphia · Open to AI engineering roles</div>
+        <h1 className="mt-4 font-display text-[clamp(60px,10.5vw,156px)] font-bold leading-[0.92] tracking-[-0.04em]">
+          Bulat <span className="text-lime">Gareev</span>
+        </h1>
 
-          <div className="relative flex flex-col items-center mb-8 md:mb-0">
-            <div
-              className="absolute inset-0 flex justify-center pointer-events-none"
-              aria-hidden="true"
-            >
-              <div className="w-full h-[200px] sm:h-[300px]
-                              bg-white/20 rounded-full blur-2xl" />
+        <div className="mt-14 flex flex-wrap items-start gap-x-14 gap-y-12">
+          <div className="min-w-0 flex-[1_1_440px]">
+            <p className="font-display text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.08] tracking-[-0.03em]">
+              I build AI-powered web &amp; mobile apps, and the evals that prove they work.
+            </p>
+            <p className="mt-6 max-w-[560px] text-mute">
+              Android engineer at URBN, now a GenAI co-op at PhoenixTeam, building agent systems with real
+              measurements behind them.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3.5">
+              <Link href="/docs/BulatGareevResume26-27.pdf" download className="btn btn-solid">Download CV</Link>
+              <Link href="https://github.com/gareev-bulat" className="btn">GitHub</Link>
+              <Link href="https://www.linkedin.com/in/bulat-gareev-295a95338/" className="btn">LinkedIn</Link>
+              <Link href="#contact" className="btn">Email</Link>
             </div>
-
-            <Image
-              src="/images/bulat_image.jpeg"
-              alt="profile picture"
-              width={400}
-              height={400}
-              priority
-              className="rounded-full object-cover
-                         w-32 h-32
-                         sm:w-48 sm:h-48
-                         md:w-56 md:h-56
-                         lg:w-64 lg:h-64"
-            />
-
-            <Link
-              href="/docs/BulatGareevResumeAugust_26/BulatGareevResume.pdf"
-              download
-              className="mt-4 inline-flex items-center space-x-2
-                         bg-brand-900 hover:bg-brand-1000 text-white
-                         rounded-full px-4 py-1 sm:py-3 lg:py-4 transition"
-            >
-              <Image
-                src="/images/download_icon.png"
-                alt="download icon"
-                width={24}
-                height={24}
-              />
-              <span className="text-sm sm:text-base">Download my CV</span>
-            </Link>
           </div>
 
-          <div className="flex flex-col text-white text-center md:text-left">
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold">
-              Bulat Gareev
-            </h2>
-            <p className="mt-2 text-md sm:text-md lg:text-xl text-brand-tealLight">
-              I build AI-powered web & mobile apps
-            </p>
-            <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
-              <Link className="bg-white text-black hover:bg-brand-1000 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base" href="#connect">
-         
-                  Gmail
-              
-              </Link>
-              <Link href="https://github.com/gareev-bulat" className="bg-white text-black hover:bg-brand-0 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base">
-               
-                  GitHub
-        
-              </Link>
-              <Link className="bg-white text-black hover:bg-brand-300 hover:text-white
-                              px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm sm:text-base" href="https://www.linkedin.com/in/bulat-gareev-295a95338/">
-  
-                  LinkedIn
-
-              </Link>
+          <div className="relative min-w-0 flex-[1_1_420px] pb-10 lg:pl-10">
+            <div className="relative ml-auto aspect-[4/5] w-full max-w-[380px] border-2 border-paper shadow-hard">
+              <Image src="/images/bulat_image.jpeg" alt="Bulat Gareev" fill priority sizes="380px" className="object-cover" />
+            </div>
+            <div className="absolute bottom-0 left-0 w-[290px] max-w-[85%] border-2 border-paper bg-ink">
+              <div className="label flex justify-between border-b-2 border-paper px-3.5 py-2 text-[11px]">
+                <span>agent.trace · sample</span><span className="text-lime">● run ok</span>
+              </div>
+              <div className="px-3.5 py-3 font-mono text-[12px] leading-[1.8]">
+                <div><span className="text-mute">01</span> user → &quot;M5+ quakes this week?&quot;</div>
+                <div><span className="text-mute">02</span> tool → <span className="text-lime">get_recent_earthquakes</span></div>
+                <div><span className="text-mute">03</span> eval → grounded: <span className="text-lime">pass</span></div>
+                <div><span className="text-mute">04</span> cost → $0.004 · 1.8s</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Aboutme />
+      <Marquee />
+      <NowStrip />
       <WorkExperience />
       <Impact />
       <Portfolio />
+      <Aboutme />
       <LeetCode />
       <Connect />
     </div>
