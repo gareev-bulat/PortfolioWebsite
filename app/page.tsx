@@ -4,7 +4,7 @@ import Marquee from "@/components/marquee";
 import NowStrip from "@/components/nowstrip";
 import WorkExperience from "@/components/workexperience";
 import Portfolio from "@/components/portfolio";
-import Aboutme from "@/components/aboutme";
+import Skills from "@/components/skills";
 import LeetCode from "@/components/leetcode";
 import Connect from "@/components/connect";
 
@@ -57,7 +57,7 @@ export default function Home() {
       <NowStrip />
       <WorkExperience />
       <Portfolio />
-      <Aboutme />
+      <Skills />
       <LeetCode />
       <Connect />
     </div>
