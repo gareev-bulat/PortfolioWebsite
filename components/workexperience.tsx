@@ -28,20 +28,20 @@ const ITEMS: WorkItem[] = [
 ];
 
 const WorkExperience = () => (
-  <section id="experience" className="bg-paper text-ink">
+  <section id="experience" className="mx-3 rounded-[32px] bg-paper text-ink sm:mx-7">
     <div className="mx-auto max-w-[1440px] px-5 py-20 lg:px-14">
       <div className="label">01 / Experience</div>
       <h2 className="h-sec mb-10 mt-3">Where I&apos;ve worked</h2>
 
-      <div className="border-b-2 border-ink">
+      <div className="border-b border-ink/20">
         {ITEMS.map((item) => (
-          <div key={item.company} className="flex flex-wrap gap-x-12 gap-y-4 border-t-2 border-ink py-9">
+          <div key={item.company} className="flex flex-wrap gap-x-12 gap-y-4 border-t border-ink/20 py-9">
             <div className="label w-full text-sm lg:w-60 lg:shrink-0">{item.period}</div>
             <div className="min-w-0 flex-1 basis-[480px]">
-              <h3 className="font-display text-[34px] font-bold leading-[1.05] tracking-[-0.03em] sm:text-[40px]">
+              <h3 className="font-display text-[34px] font-medium leading-[1.05] tracking-[-0.03em] sm:text-[40px]">
                 {item.position}
               </h3>
-              <div className="label mt-2 text-sm text-[#B3261E]">{item.company}</div>
+              <div className="label mt-2 text-sm text-burnt">{item.company}</div>
               {item.bullets.length > 0 && (
                 <ul className="mt-4 max-w-[720px] list-disc space-y-2 pl-5">
                   {item.bullets.map((b, i) => (

@@ -36,7 +36,7 @@ const Counter = ({ stat, start }: { stat: Stat; start: boolean }) => {
   }, [start, stat.value]);
 
   return (
-    <span className="block font-display text-[clamp(64px,8vw,112px)] font-bold leading-[0.85] tracking-[-0.04em]">
+    <span className="block font-display text-[clamp(64px,8vw,112px)] font-medium leading-[0.85] tracking-[-0.04em]">
       {stat.prefix}
       {n}
       {stat.suffix}

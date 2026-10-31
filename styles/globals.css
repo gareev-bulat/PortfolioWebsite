@@ -98,11 +98,11 @@ html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: 72px; }
 
 @layer components {
-  .label { @apply font-mono uppercase tracking-wide text-xs; line-height: 1.4; }
-  .h-sec { @apply font-display font-bold tracking-tighter text-4xl sm:text-5xl lg:text-7xl; line-height: 1; letter-spacing: -0.04em; }
-  .btn { @apply inline-flex items-center min-h-[52px] px-6 border-2 border-paper font-mono uppercase tracking-wide text-sm transition-transform hover:-translate-x-[3px] hover:-translate-y-[3px]; }
-  .btn-solid { @apply bg-lime border-lime text-ink font-medium; }
-  .tag { @apply inline-block border-[1.5px] border-current px-3 py-1 font-mono uppercase text-xs tracking-wide; }
+  .label { @apply font-mono tracking-normal text-xs; line-height: 1.4; }
+  .h-sec { @apply font-display font-medium tracking-tighter text-4xl sm:text-5xl lg:text-7xl; line-height: 1; letter-spacing: -0.03em; }
+  .btn { @apply inline-flex items-center min-h-[52px] px-7 border-[1.5px] border-edge rounded-full font-mono tracking-normal text-sm transition hover:-translate-y-0.5; }
+  .btn-solid { @apply bg-accent border-accent text-ink font-medium; }
+  .tag { @apply inline-block border border-edge rounded-full px-3.5 py-1 font-mono text-xs tracking-normal; }
 }
 
 @keyframes slide { to { transform: translateX(-50%); } }

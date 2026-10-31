@@ -10,16 +10,16 @@ const GROUPS: [string, string][] = [
 ];
 
 const Skills = () => (
-  <section id="skills" className="bg-lime text-ink">
+  <section id="skills" className="mx-3 mt-4 rounded-[32px] bg-accent text-ink sm:mx-7">
     <div className="mx-auto max-w-[1440px] px-5 py-20 lg:px-14">
       <div className="label">03 / About &amp; Skills</div>
       <h2 className="h-sec mb-10 mt-3">What I work with</h2>
 
-      <div className="grid border-t-2 border-ink lg:grid-cols-2">
+      <div className="grid border-t border-ink/30 lg:grid-cols-2">
         {GROUPS.map(([k, v], i) => (
-          <div key={k} className={`border-b-2 border-ink py-7 ${i % 2 === 0 ? "lg:pr-6" : "lg:pl-6"}`}>
+          <div key={k} className={`border-b border-ink/30 py-7 ${i % 2 === 0 ? "lg:pr-6" : "lg:pl-6"}`}>
             <div className="label text-[13px]">{k}</div>
-            <div className="mt-2 font-display text-[28px] font-bold leading-[1.1] tracking-[-0.02em]">{v}</div>
+            <div className="mt-2 font-display text-[28px] font-medium leading-[1.1] tracking-[-0.02em]">{v}</div>
           </div>
         ))}
       </div>
