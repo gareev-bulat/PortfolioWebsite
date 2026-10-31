@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        hard: "6px 6px 0 #C6FF3D",
+        soft: "0 24px 60px rgba(8, 12, 26, 0.35)",
         glow: "0 0 8px rgba(2,201,242,0.7), 0 0 16px rgba(2,201,242,0.5)",
       },
 
@@ -52,10 +52,15 @@ module.exports = {
       },
 
       colors: {
-        ink: "#0A0A0A",
-        paper: "#F2EFE6",
-        lime: "#C6FF3D",
-        mute: "#9C9A92",
+        ink: "#202A44",
+        "ink-deep": "#1A2238",
+        surface: "#2A3554",
+        line: "#3A4668",
+        edge: "#5A6788",
+        paper: "#F2F4F8",
+        accent: "#F98128",
+        burnt: "#A84608",
+        mute: "#A9B3C9",
         brand: {
           300: "#2868B2",
           500: "#024950",

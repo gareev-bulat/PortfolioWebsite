@@ -41,70 +41,68 @@ const GITHUB_links = {
 export type ToolKey = keyof typeof PATHS;
 
 type CardProps = {
+  index: number;
   name: string;
   image: string;
   tools: ToolKey[];
+  date: string;
   description: string;
 };
 
-const projectCard = ({ name, image, tools, description }: CardProps) => {
+const projectCard = ({ index, name, image, tools, date, description }: CardProps) => {
+  const repo = name in GITHUB_links ? GITHUB_links[name as keyof typeof GITHUB_links] : null;
+
   return (
-    <div className="w-full rounded-3xl border-[7px] border-brand-700 bg-brand-teal text-brand-700 p-6 cursor-pointer pendulum-hover transition-all duration-500 hover:bg-brand-tealLight">
-      <div className="flex flex-col sm:flex-row gap-6">
-        <Image
-          src={image}
-          alt={name}
-          width={140}
-          height={170}
-          className="rounded-2xl object-cover shrink-0 self-start"
-        />
+    <article className="group flex flex-wrap items-start gap-x-10 gap-y-5 rounded-[20px] border-t border-line py-9 transition-all duration-200 hover:bg-surface sm:hover:px-6">
+      <div className="w-full font-display text-4xl font-medium leading-none text-mute sm:w-[90px]">
+        {String(index).padStart(2, "0")}
+      </div>
 
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-row items-center gap-3">
-            <div className="font-display text-2xl sm:text-3xl">{name}</div>
-            {name in GITHUB_links && (
-              <Link
-                href={GITHUB_links[name as keyof typeof GITHUB_links]}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={`View ${name} on GitHub`}
-                className="animate-bounce flex items-center gap-1.5 bg-brand-700 hover:bg-brand-1000 text-brand-200 rounded-full px-3 py-1.5 transition-colors"
-              >
-                <Image
-                  src={PATHS["GitHub"]}
-                  width={20}
-                  height={20}
-                  alt=""
-                  className="invert"
-                />
-                <span className="text-xs font-semibold">Code</span>
-              </Link>
-            )}
-          </div>
+      <div className="min-w-0 flex-1 basis-[400px]">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <h3 className="font-display text-[clamp(30px,3.4vw,48px)] font-medium leading-none tracking-[-0.03em] transition-colors group-hover:text-accent">
+            {name}
+          </h3>
+          {repo && (
+            <Link
+              href={repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`View ${name} on GitHub`}
+              className="inline-flex items-center rounded-full border-[1.5px] border-edge px-4 py-1.5 font-mono text-xs tracking-normal transition hover:border-accent hover:text-accent"
+            >
+              Code &#8599;
+            </Link>
+          )}
+        </div>
 
-          <p className="text-sm sm:text-base leading-relaxed font-normal">
-            {description}
-          </p>
+        <div className="label mt-3 text-mute">{date}</div>
 
-          <div className="flex flex-row flex-wrap gap-4 mt-1">
-            {tools.map((tool, index) => (
-              <div
-                key={index}
-                className="bg-white/90 rounded-lg p-1.5 flex items-center justify-center"
-              >
-                <Image
-                  width={28}
-                  height={28}
-                  src={PATHS[tool as keyof typeof PATHS]}
-                  alt={tool}
-                  title={tool}
-                />
-              </div>
-            ))}
-          </div>
+        <p className="mt-4 max-w-[620px] text-base font-normal leading-relaxed">{description}</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {tools.map((tool, i) => (
+            <div key={i} className="flex items-center justify-center rounded-xl bg-paper p-1.5">
+              <Image
+                width={28}
+                height={28}
+                src={PATHS[tool as keyof typeof PATHS]}
+                alt={tool}
+                title={tool}
+              />
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+
+      <Image
+        src={image}
+        alt={`${name} app icon`}
+        width={140}
+        height={170}
+        className="shrink-0 self-start rounded-2xl border border-line object-cover"
+      />
+    </article>
   );
 };
 

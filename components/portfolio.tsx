@@ -53,35 +53,25 @@ const ITEMS: PortfolioItem[] = [
     }
 ]
 
-const Portfolio = () => {
-  return (
-    <section id="portfolio">
-      <h2 className="font-display text-3xl text-white text-center sm:text-3xl lg:text-5xl p-10">Portfolio</h2>
+const Portfolio = () => (
+  <section id="projects" className="mx-auto max-w-[1440px] px-5 py-20 lg:px-14">
+    <div className="label text-accent">02 / Projects</div>
+    <h2 className="h-sec mb-10 mt-3">Things I&apos;ve built</h2>
 
-      <div className="max-w-4xl mx-auto px-6 mb-20">
-        <div className="relative pl-8 sm:pl-10">
-          <div className="absolute left-[6px] top-3 bottom-3 w-[2px] bg-brand-teal/50" />
-
-          {ITEMS.map((item, i) => (
-            <div key={item.id} className="relative mb-10 last:mb-0">
-              <div
-                className={`absolute -left-8 sm:-left-10 top-8 w-[14px] h-[14px] rounded-full border-2 border-brand-200 ${
-                  i === 0 ? "bg-brand-1000" : "bg-brand-teal"
-                }`}
-              />
-              <div className="text-brand-tealLight text-sm mb-2">{item.date}</div>
-              <ProjectCard
-                name={item.name}
-                image={item.image}
-                tools={item.tools}
-                description={item.description}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+    <div className="border-b border-line">
+      {ITEMS.map((item, i) => (
+        <ProjectCard
+          key={item.id}
+          index={i + 1}
+          name={item.name}
+          image={item.image}
+          tools={item.tools}
+          date={item.date}
+          description={item.description}
+        />
+      ))}
+    </div>
+  </section>
+)
 
 export default Portfolio

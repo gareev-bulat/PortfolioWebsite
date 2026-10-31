@@ -53,23 +53,30 @@ const Connect = () => {
   };
 
   const inputClass =
-    "h-10 bg-white border border-gray-300 focus:outline-none transition ease-in-out rounded-[5px] text-black text-base font-normal p-4";
+    "w-full border-0 border-b-[1.5px] border-ink/40 bg-transparent py-3 text-xl font-normal text-ink outline-none transition focus:border-burnt";
 
   return (
-    <section id="connect">
-      <h2 className="font-display text-3xl text-white text-center sm:text-3xl lg:text-5xl p-10">
-        Connect with me
-      </h2>
+    <section
+      id="contact"
+      className="mx-3 mt-4 flex flex-wrap gap-14 rounded-[32px] bg-paper px-5 py-20 text-ink sm:mx-7 lg:px-14"
+    >
+      <div className="min-w-0 flex-[1_1_460px]">
+        <div className="label">05 / Contact</div>
+        <h2 className="mt-3 font-display text-[clamp(48px,7vw,104px)] font-medium leading-[0.95] tracking-[-0.03em]">
+          Let&apos;s talk<span className="text-burnt">.</span>
+        </h2>
+        <p className="mt-7 max-w-[460px] font-normal">
+          Open to conversations about AI engineering, mobile and co-ops. I read every message.
+        </p>
+      </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-3xl mx-auto mt-8 mb-[200px] space-y-4 text-white text-base_l shadow-2xl shadow-white bg-gradient-to-b flex flex-col items-center p-4 rounded-3xl from-[#964734] to-[#0FA4AF]"
-      >
-        <div className="flex flex-col gap-2 w-full px-4">
-          <label className="font-semibold">
-            Full Name<span className="text-brand-1000 pl-1">*</span>
+      <form onSubmit={handleSubmit} className="flex min-w-0 flex-[1_1_420px] flex-col gap-7 self-end">
+        <div>
+          <label htmlFor="c-name" className="label">
+            Full name<span className="pl-1 text-burnt">*</span>
           </label>
           <input
+            id="c-name"
             required
             value={form.name}
             onChange={(e) => update("name", e.target.value)}
@@ -77,11 +84,12 @@ const Connect = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-2 w-full px-4">
-          <label className="font-semibold">
-            Email<span className="text-brand-1000 pl-1">*</span>
+        <div>
+          <label htmlFor="c-email" className="label">
+            Email<span className="pl-1 text-burnt">*</span>
           </label>
           <input
+            id="c-email"
             required
             type="email"
             placeholder="your.email@example.com"
@@ -91,54 +99,54 @@ const Connect = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-2 w-full px-4">
-          <label className="font-semibold">Subject</label>
+        <div>
+          <label htmlFor="c-subject" className="label">Subject</label>
           <input
+            id="c-subject"
             value={form.subject}
             onChange={(e) => update("subject", e.target.value)}
             className={inputClass}
           />
         </div>
 
-        <div className="flex flex-col gap-2 w-full px-4">
-          <label className="font-semibold">
-            Message<span className="text-brand-1000 pl-1">*</span>
+        <div>
+          <label htmlFor="c-message" className="label">
+            Message<span className="pl-1 text-burnt">*</span>
           </label>
           <textarea
+            id="c-message"
             required
-            rows={5}
+            rows={4}
             value={form.message}
             onChange={(e) => update("message", e.target.value)}
-            className="h-30 bg-white border border-gray-300 focus:outline-none transition ease-in-out rounded-[5px] text-left align-top leading-normal resize-none text-black text-base font-extralight px-4 pt-2"
+            className={`${inputClass} resize-none`}
           />
         </div>
 
-        <div className="flex flex-col items-center gap-3 pt-2">
+        <div className="flex flex-col items-start gap-4">
           <button
             type="submit"
             disabled={status === "sending"}
-            className="px-12 py-3 font-semibold bg-brand-900 hover:bg-brand-1000 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-full transition"
+            className="min-h-[56px] rounded-full bg-ink px-8 font-mono text-sm tracking-normal text-paper transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {status === "sending" ? "Sending…" : "Send"}
+            {status === "sending" ? "Sending…" : "Send message →"}
           </button>
 
           {status === "sent" && (
-            <div className="flex items-center gap-3 bg-white text-brand-700 rounded-xl px-5 py-3 shadow-lg animate-soft-bounce">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-brand-teal text-white text-sm font-bold shrink-0">
+            <div role="status" className="flex items-center gap-3 rounded-xl bg-ink px-5 py-3 text-paper">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-ink">
                 ✓
               </span>
-              <span className="font-semibold text-sm">
-                Message sent - I&apos;ll get back to you soon!
-              </span>
+              <span className="text-sm font-medium">Message sent - I&apos;ll get back to you soon!</span>
             </div>
           )}
 
           {status === "error" && (
-            <div className="flex items-center gap-3 bg-white text-brand-1000 rounded-xl px-5 py-3 shadow-lg">
-              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-brand-1000 text-white text-sm font-bold shrink-0">
+            <div role="alert" className="flex items-center gap-3 rounded-xl border border-burnt px-5 py-3 text-burnt">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-burnt text-sm font-bold text-paper">
                 !
               </span>
-              <span className="font-semibold text-sm">{errorMsg}</span>
+              <span className="text-sm font-medium">{errorMsg}</span>
             </div>
           )}
         </div>
