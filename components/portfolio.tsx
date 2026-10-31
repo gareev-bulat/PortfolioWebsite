@@ -13,9 +13,10 @@ type PortfolioItem = {
 const ITEMS: PortfolioItem[] = [
     {
         name: "Brodie Dance",
+        image: '/images/projectIcons/Brodie_project.png',
         tools: ['Python', 'LiveKit', 'Gemini'],
         date: "October 2026",
-        description: "AI dance coach you call on FaceTime, with no app to install. Tracks your whole body with pose tracking, scores each part against the original dance, and coaches you by voice in real time. Built by a team of five; 2nd place at IvyHacks 2026 (UPenn) and launched to real users.",
+        description: "AI dance coach you call on FaceTime, with no app to install. Tracks your whole body with pose tracking, scores each part against the original dance, and coaches you by voice in real time. Built by a team of five; 2nd place at IvyHacks 2026 (UPenn) and launched to real users. Brodie character by Seraphim Labs.",
         id: 5,
     },
     {
