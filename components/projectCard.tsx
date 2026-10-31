@@ -36,6 +36,7 @@ const GITHUB_links = {
   CoopCompass: "https://github.com/gareev-bulat/Co-Op-Compass.git",
   RESET: "https://github.com/gareev-bulat/RESET.git",
   Nomiyo: "https://github.com/gareev-bulat/Nomiyo.git",
+  "Brodie Dance": "https://github.com/zxpeng2007/ivyhacks-brodie-dance",
 };
 
 export type ToolKey = keyof typeof PATHS;
@@ -43,7 +44,7 @@ export type ToolKey = keyof typeof PATHS;
 type CardProps = {
   index: number;
   name: string;
-  image: string;
+  image?: string;
   tools: ToolKey[];
   date: string;
   description: string;
@@ -95,13 +96,25 @@ const projectCard = ({ index, name, image, tools, date, description }: CardProps
         </div>
       </div>
 
-      <Image
-        src={image}
-        alt={`${name} app icon`}
-        width={140}
-        height={170}
-        className="shrink-0 self-start rounded-2xl border border-line object-cover"
-      />
+      {image ? (
+        <Image
+          src={image}
+          alt={`${name} app icon`}
+          width={140}
+          height={170}
+          className="shrink-0 self-start rounded-2xl border border-line object-cover"
+        />
+      ) : (
+        <div
+          aria-hidden="true"
+          className="flex h-[170px] w-[140px] shrink-0 items-center justify-center self-start rounded-2xl border border-line bg-surface font-display text-4xl font-medium text-accent"
+        >
+          {name
+            .split(" ")
+            .map((w) => w[0])
+            .join("")}
+        </div>
+      )}
     </article>
   );
 };

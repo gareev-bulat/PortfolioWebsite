@@ -3,7 +3,7 @@ import type { ToolKey } from './projectCard'
 
 type PortfolioItem = {
     name: string,
-    image: string,
+    image?: string,
     tools: ToolKey[],
     date: string,
     description: string,
@@ -11,6 +11,13 @@ type PortfolioItem = {
 }
 
 const ITEMS: PortfolioItem[] = [
+    {
+        name: "Brodie Dance",
+        tools: ['Python', 'LiveKit', 'Gemini'],
+        date: "October 2026",
+        description: "AI dance coach you call on FaceTime, with no app to install. Tracks your whole body with pose tracking, scores each part against the original dance, and coaches you by voice in real time. Built by a team of five; 2nd place at IvyHacks 2026 (UPenn) and launched to real users.",
+        id: 5,
+    },
     {
         name: "Nomiyo",
         image: '/images/projectIcons/Nomiyo_project.png',
